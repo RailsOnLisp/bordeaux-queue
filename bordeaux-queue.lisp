@@ -150,7 +150,7 @@
     (with-lock-held (lock)
       (let* ((vector-length (length vector))
              (len length)
-             (result (make-array `(len)
+             (result (make-array `(,len)
                                  :element-type (array-element-type vector))))
         (dotimes (i len)
           (setf read-index (mod (1+ read-index) vector-length)
